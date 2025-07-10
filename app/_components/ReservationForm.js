@@ -1,4 +1,9 @@
+"use client";
+
+import { useReservation } from "./ReservationContex";
+
 function ReservationForm({ cabin }) {
+  const { range } = useReservation();
   // CHANGE
   const { maxCapacity } = cabin;
 
@@ -6,7 +11,6 @@ function ReservationForm({ cabin }) {
     <div className="scale-[1.01]">
       <div className="bg-primary-800 text-primary-300 px-16 py-2 flex justify-between items-center">
         <p>Logged in as</p>
-
         {/* <div className='flex gap-4 items-center'>
           <img
             // Important to display google profile images
